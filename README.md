@@ -26,7 +26,7 @@
 -has_many: group_users
 -has_many: messages
 
-## group_userテーブル
+## group_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, index: true, foreign_key: true|
