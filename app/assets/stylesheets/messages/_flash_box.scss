@@ -1,7 +1,11 @@
+@import "./config/variables";
 .flash-box {
   color: white;
   font-size: 1rem;
   font-weight: lighter;
   text-align: center;
   width: 100vw;
+  .notice{
+    background-color: $skyblue-btn;
+  }
 }
