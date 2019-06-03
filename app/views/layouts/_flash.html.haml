@@ -7,16 +7,13 @@
         .side-header__box__user-name アンパンマン
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            -# %a{href: "/groups/new"}
-            =link_to '/groups/new' do
+            =link_to do
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            -# %a{href: "/users/474/edit"}
-            =link_to '/users/474/edit' do
+            =link_to do
               %i.fa.fa-cog
     .groups
-      -# %a{href: "/groups/959/messages"}
-      = link_to '/groups/959/messages' do
+      = link_to do
         .group
           %p.group__group-name soccer
           %p.group__latest-message まだメッセージはありません。
@@ -29,8 +26,7 @@
           Member：
           %li.main-header__left-box__member-list__member wwwww
           %li.main-header__left-box__member-list__member dfasfa
-      -# %a{href: "/groups/958/edit"}
-      = link_to '/groups/958/edit' do
+      = link_to do
         .main-header__edit-btn Edit
     .messages
       .message{"data-message_id" => "2278"}
@@ -38,7 +34,6 @@
           %p.message__upper-info__talker   アイウエオabcdef
           %p.message__upper-info__date  2019/05/30(thr)16:07:24
         %p.message__text ddddddd
-        -# %img{src: "/uploads/message/image/2734/%E7%8C%AB.jpg"}/
     .form
       %form#new_message.new_message{"accept-charset" => "UTF-8", action: "/groups/958/messages", enctype: "multipart/form-data", method: "post"}
         %input{name: "utf8", type: "hidden", value: "✓"}/
