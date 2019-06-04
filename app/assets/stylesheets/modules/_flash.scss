@@ -1,21 +1,14 @@
 @import "./config/variables";
-.flash-box {
-  color: white;
-  font-size: 1rem;
-  font-weight: lighter;
-  text-align: center;
-  width: 100vw;
-
-  .notification {
+.notification {
     .notice {
       background-color: $skyblue-btn;
       color: $white;
       text-align: center;
     }
-  }
+
     .alert {
       background-color: $alert_orange ;
       color: $white;
       text-align: center;
     }
-}
+  }
