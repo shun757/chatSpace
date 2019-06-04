@@ -4,6 +4,8 @@
 @import "./messages/flash_box.scss";
 @import "font-awesome";
 @import "./config/variables";
+@import "modules/user.scss";
+@import "modules/flash.scss";
 * {
   box-sizing: border-box;
 }
