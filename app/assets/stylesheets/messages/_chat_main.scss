@@ -18,17 +18,17 @@
         color: #333;
         margin-bottom: 15px;
       }
-      ul{
+      &__member-list{
           display: flex;
           font-size: 12px;
           color: $sub-text;
           li{
             margin-right: 3px;
+            list-style: none;
           }
       }
     }
     &__edit-btn{
-      color:$skyblue-btn;
       height: 40px;
       line-height: 40px;
       padding: 0 20px;
@@ -36,12 +36,16 @@
       border: solid 1px $skyblue-btn;
       position: absolute;
       right: 40px;
+      .right-header__button{
+        color:$skyblue-btn;
+        text-decoration: none;
+      }
     }
   }
 
   .messages{
     height: calc(100vh - 190px);
-    padding: 46px 40px;
+    padding: 46px 40px 0;
     background-color: #fafafa;
     overflow: scroll;
     .message{
@@ -70,40 +74,49 @@
 
   .form {
     height: 90px;
-    padding: 20px 40px;
+    padding: 20px 50px 20px 40px;
     background-color: #ddd;
-
-    form {
-        display: flex;
-      .input-box{
-          position: relative;
-          width: 100%;
-            &__text{
-              height: 50px;
-              width: 100%;
-              padding: 0 40px 0 10px;
-              color: $sub-info;
-              border-style: none;
-            }
-              &__image {
-                font-size: 1.3rem;
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                cursor: pointer;
-                .fa-image {
-                }
-              }
-            }
-          .submit-btn {
-                width: 100px;
-                height: 50px;
-                padding: 0 30px;
-                margin-left: 15px;
-                background-color: $skyblue-btn;
-                color: $side-font;
-                cursor: pointer;
-            }
+    box-sizing: border-box;
+    .input-box{
+      position: relative;
+      input {
+        border: none;
+        float: left;
+        height: 50px; 
+        width: calc(100% - 150px);
+      }
+      .form__mask__image {
+        // float: right;
+        color: $sub-info;
+        float: left;
+        font-size: 1.3rem;
+        position: absolute;
+        cursor: pointer;
+        .fa-image {
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+        }
+        .hidden{
+          display: none;
+        }
+      }
+      .form__submit {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $skyblue-btn;
+        color: $side-font;
+        // cursor: pointer;
+        // float: left;
+        // font-size: 16px;
+        // height: 50px;
+        // margin-left: 15px;
+        // padding: 0 30px;
+      }
     }
   }
 }

@@ -1,0 +1,10 @@
+.main_footer
+  = form_for [@group, @message] do |f|
+    .input-box
+      .input-box__text
+        = f.text_field :content, placeholder: 'type a message', type: 'text' 
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
