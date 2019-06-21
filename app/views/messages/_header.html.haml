@@ -1,0 +1,13 @@
+.main-header__left-box{data: {group_id: @group.id}}
+  .main-header__left-box__current-group
+    = @group.name
+  .main-header__left-box__member-list
+    Member：
+    - @group.users.each do |user|
+      %li.member
+        = user.name
+
+.main-header__edit-btn
+  .right-header__button
+    = link_to edit_group_path(@group) do
+      Edit

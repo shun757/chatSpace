@@ -19,3 +19,10 @@
               = group.name
             .group__message
               = group.show_last_message
+  .chat-main
+    .main-header
+      = render 'header'
+    .messages
+      = render @messages
+    .form
+      = render 'main_footer'
