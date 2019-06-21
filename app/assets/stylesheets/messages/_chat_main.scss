@@ -74,7 +74,7 @@
 
   .form {
     height: 90px;
-    padding: 20px 50px 20px 40px;
+    padding: 20px 40px 20px 40px;
     background-color: #ddd;
     box-sizing: border-box;
     .input-box{
@@ -86,11 +86,14 @@
         width: calc(100% - 150px);
       }
       .form__mask__image {
-        // float: right;
+        height: 50px;
+        background-color: $white;
         color: $sub-info;
         float: left;
         font-size: 1.3rem;
-        position: absolute;
+        padding-top: 10px;
+        padding-right: 10px;
+        // position: absolute;
         cursor: pointer;
         .fa-image {
           display: inline-block;
