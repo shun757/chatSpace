@@ -1,0 +1,5 @@
+- if user.id != current_user.id
+  %div{class: "chat-group-user clearfix", id: user.id}
+    %p.chat-group-user__name= user.name
+    .chat-group-user__btn.chat-group-user__btn--remove 削除
+    = f.hidden_field :user_ids, name: "group[user_ids][]", value: user.id

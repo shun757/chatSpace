@@ -26,23 +26,8 @@
         %div{class: 'chat-group-user clearfix', id: current_user.id}
           %p= current_user.name
           = f.hidden_field :user_ids, name: "group[user_ids][]", value: current_user.id
-        - group.users.each do |user|
-          - if user.id != current_user.id
-            %div{class: "chat-group-user clearfix", id: user.id}
-              %p.chat-group-user__name= user.name
-              .chat-group-user__btn.chat-group-user__btn--remove 削除
-              = f.hidden_field :user_ids, name: "group[user_ids][]", value: user.id
-  -# .chat-group-form__field.clearfix
-  -#   .chat-group-form__field--left
-  -#     %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
-  -#   .chat-group-form__field--right
-  -#     / グループ作成機能の追加時はここにcollection_check_boxesの記述を入れてください
-  -#     = f.collection_check_boxes :user_ids, User.all, :id, :name
-  -#     / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
-  -#     #chat-group-users
-  -#       #chat-group-user-22.chat-group-user.clearfix
-  -#         %input{name: "chat_group[user_ids][]", type: "hidden", value: "22"}/
-  -#         %p.chat-group-user__name seo_kyohei
+          = render partial: "./group_user/group_user", collection: group.users, as:"user"
+
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
