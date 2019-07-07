@@ -69,7 +69,6 @@ $(document).on('turbolinks:load', function() {
         if (data.length > 0){
           var addHtml ='';
           data.forEach(function(message){
-          console.log(message);
             addHtml += buildMessage(message);
           });
           $('.messages').append(addHtml)
