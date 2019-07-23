@@ -3,7 +3,7 @@ $(document).on('turbolinks:load', function() {
   group_id = $('.group-info').data('group-id');
 
   function buildMessage(message) {
-    var image = message.image.url ? `<img src=${message.image}>` : '';
+    var image = message.image ? `<img src="${message.image}">` : ``;
     var message = `<div class='message' data-message-id="${message.id}">
                     <div class='message__upper-info'>
                       <div class='message__upper-info__tolker'>
