@@ -1,5 +1,6 @@
 $(document).on('turbolinks:load', function() {
   url = $(location).attr('pathname');
+  console.log(url)
   group_id = $('.group-info').data('group-id');
 
   function buildMessage(message) {
@@ -38,6 +39,7 @@ $(document).on('turbolinks:load', function() {
     })
 
     .done(function(data){
+      console.log(data)
       var html = buildMessage(data);
       $('.messages').append(html);
       $('.new_message')[0].reset();
